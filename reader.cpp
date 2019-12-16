@@ -114,7 +114,7 @@ const char* readNodeText(const char* &data)
     size_t size = data - start + 1;
     ++data;
 
-    char* text = new char[size];
+    char* text = new char[size]();
 
     for(size_t i = 0; i < size - 1; ++i)
         text[i] = start[i];
@@ -144,7 +144,7 @@ char* readFile(FILE* file)
 {
     size_t size = getFileSize(file);
     
-    char* buffer = new char[size];
+    char* buffer = new char[size]();
     assert(buffer != nullptr);
 
     fread(buffer, sizeof(char), size, file);
