@@ -58,7 +58,8 @@ char* Akinator::getLineAnswer_(const char* question)
 
 void Akinator::addDifference_(node_t* node, node_t* parrent)
 {
-    assert(node != nullptr);
+    assert(node    != nullptr);
+    assert(parrent != nullptr);
     assert(this->isFoliage_(node));
     assert(parrent->right == node || parrent->left == node);
 
