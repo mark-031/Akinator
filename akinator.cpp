@@ -49,7 +49,7 @@ char* Akinator::getLineAnswer_(const char* question)
 
     size_t len = strlen(line) + 1;
 
-    char* ans = new char[len];
+    char* ans = new char[len]();
 
     strcpy(ans, line);
 
@@ -75,7 +75,7 @@ void Akinator::addDifference_(node_t* node, node_t* parrent)
                + strlen(line2) + strlen(rightans)
                + 1;
     
-    char* question = new char[len];
+    char* question = new char[len]();
 
     question[0] = '\0';
     
@@ -367,7 +367,7 @@ int Akinator::compare()
 
 Way* Akinator::findWay(const char* name)
 {
-    Way* way = new Way;
+    Way* way = new Way();
 
     if(this->checkWay_(this->root, name, way, 0) != 1)
     {
